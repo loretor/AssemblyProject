@@ -13,7 +13,7 @@ In the end it is a very basic project, but the aim of this assignement was to te
 The user inserts some banknotes inside the machine, then when it's ready a button is pushed. Then the customer must insert the nozzle into the tank inlet and then press the dispenser's start button. Then he must wait until the dispencer has finished
 
 ## General explanation of the code
-In the [pdf file](/main/MIPS.pdf)  there is a flow chart diagram to explain how the code works.
+In the [pdf file](AssemblyProject/blob/main/MIPS.pdf)  there is a flow chart diagram to explain how the code works.
 
 The microcomputer exchanges information with the bill acceptor through the 16-bit cell M_BANC and with the dispenser through the 16-bit cell ERG. Then, it waits on the M_BANC cell until the bill acceptor notifies the presence of a banknote by setting line 15 to 1. The microcomputer sends the LEGGI (read in italian) command (coded as 4000 in hexadecimal) to the M_BANC cell and waits until the machine sets line 7 to 1, indicating that the banknote has been successfully read. Additionally, bits 3 and 2 encode the following 4 cases:
 - 00: €5 banknote
