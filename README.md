@@ -20,6 +20,7 @@ The microcomputer exchanges information with the bill acceptor through the 16-bi
 - 01: €10 banknote
 - 10: €20 banknote
 - 11: Invalid banknote. In this case, the microcomputer sends the ESPELLI (expluse in italian) command (coded as 1000 in hexadecimal) to the M_BANC cell.
+
 The microcomputer reads the data in the cell and updates the sum of all the banknotes. Then it waits on the M_BANC cell until the confirmation button for the amount is pressed (as said before this is simulated by setting a certain value inside a cell of the MIPS). When this event occurs, the machine sets line 4 in the M_BANC cell to 1. At this point, the microcomputer suspends bill acceptance.
 
 The dispenser informs the microcomputer of the button press by setting line 15 in the ERG cell to 1. At this point, the microcomputer activates the dispenser by setting line 14 in the ERG cell to 1, resets the amount, and re-enables bill acceptance. We asssume that the dispensing process lasts for two and a half minutes.
