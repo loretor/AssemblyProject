@@ -3,7 +3,7 @@ This is a small university project developed with the collaboration of other thr
 In particular this project is done based on the architecture of the micro processor MIPS R2000 (clock frequency of 500MHz).
 
 ## Technologies Used
-To simulate the code we used the [PC SPIM](https://pages.cs.wisc.edu/~larus/SPIM//RelazioneTesi.pdf)
+To simulate the code we used the [PC SPIM](https://pages.cs.wisc.edu/~larus/SPIM)
 
 ## Explanation of the project
 The project is based on the simulation of a gasoline dispenser. Specifically, the user-machine interaction is simulated by setting specific registers of the PC SPIM. For example, simulating the insertion of a 5 euro banknote by the customer was achieved by setting a particular cell of the microcomputer to 0, or the waiting time for fuel dispensing was managed using a cycle that increments a register by 1 until a certain value proportional to the wait time is reached.
